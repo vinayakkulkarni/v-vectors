@@ -8,17 +8,16 @@ import typescript from 'rollup-plugin-typescript2';
 const extensions = ['.js', '.ts', '.vue'];
 const plugins = [
   alias({
-    entries: {
-      vue: 'vue/dist/vue.esm-browser.prod.js',
-    },
+    entries: [
+      {
+        find: 'vue',
+        replacement: 'vue/dist/vue.runtime.esm-browser.prod.js',
+      },
+    ],
   }),
   resolve({
     extensions,
     browser: true,
-  }),
-  babel({
-    babelHelpers: 'bundled',
-    exclude: 'node_modules/**',
   }),
   commonjs({
     extensions,
@@ -34,6 +33,10 @@ const plugins = [
   typescript({
     include: [/\.tsx?$/, /\.vue\?.*?lang=ts/],
     useTsconfigDeclarationDir: true,
+  }),
+  babel({
+    babelHelpers: 'bundled',
+    exclude: 'node_modules/**',
   }),
 ];
 

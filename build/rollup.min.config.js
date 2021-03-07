@@ -9,9 +9,12 @@ import { terser } from 'rollup-plugin-terser';
 const extensions = ['.js', '.ts', '.vue'];
 const plugins = [
   alias({
-    entries: {
-      vue: 'vue/dist/vue.runtime.esm-browser.prod.js',
-    },
+    entries: [
+      {
+        find: 'vue',
+        replacement: 'vue/dist/vue.runtime.esm-browser.prod.js',
+      },
+    ],
   }),
   resolve({
     extensions,
