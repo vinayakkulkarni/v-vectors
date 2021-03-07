@@ -1,6 +1,41 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
+import alias from '@rollup/plugin-alias';
+import resolve from '@rollup/plugin-node-resolve';
 import vue from 'rollup-plugin-vue';
+import typescript from 'rollup-plugin-typescript2';
+
+const extensions = ['.js', '.ts', '.vue'];
+
+const plugins = [
+  alias({
+    entries: {
+      vue: 'vue/dist/vue.runtime.esm-browser.prod.js',
+    },
+  }),
+  resolve({
+    extensions,
+    browser: true,
+  }),
+  babel({
+    babelHelpers: 'bundled',
+    exclude: 'node_modules/**',
+  }),
+  commonjs({
+    extensions,
+    exclude: 'src/**',
+  }),
+  vue({
+    isWebComponent: true,
+    template: {
+      isProduction: true,
+    },
+  }),
+  typescript({
+    include: [/\.tsx?$/, /\.vue\?.*?lang=ts/],
+    useTsconfigDeclarationDir: true,
+  }),
+];
 
 export default [
   // ESM build to be used with webpack/rollup.
@@ -11,14 +46,7 @@ export default [
       name: 'v-vectors',
       file: 'dist/v-vectors.esm.js',
     },
-    plugins: [
-      babel({
-        exclude: 'node_modules/**',
-      }),
-      commonjs(),
-      vue(),
-    ],
-    external: ['@vue/composition-api'],
+    plugins,
   },
   // CommonJS build
   {
@@ -28,14 +56,7 @@ export default [
       name: 'v-vectors',
       file: 'dist/v-vectors.cjs.js',
     },
-    plugins: [
-      babel({
-        exclude: 'node_modules/**',
-      }),
-      commonjs(),
-      vue(),
-    ],
-    external: ['@vue/composition-api'],
+    plugins,
   },
   // UMD build.
   {
@@ -44,17 +65,7 @@ export default [
       format: 'umd',
       name: 'v-vectors',
       file: 'dist/v-vectors.js',
-      globals: {
-        '@vue/composition-api': 'vueCompositionApi',
-      },
     },
-    plugins: [
-      babel({
-        exclude: 'node_modules/**',
-      }),
-      commonjs(),
-      vue(),
-    ],
-    external: ['@vue/composition-api'],
+    plugins,
   },
 ];

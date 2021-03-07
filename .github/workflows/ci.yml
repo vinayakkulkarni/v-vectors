@@ -31,20 +31,13 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
+
       - name: Install dependencies 🛠
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --prefer-offline --no-audit
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate the static site ⚡️
-        run: npm run generate
-        env:
-          API_URL: ${{ secrets.API_URL }}
-          GOOGLE_MAP_KEY: ${{ secrets.GOOGLE_MAP_KEY }}
-          INIT_CUST_LAT: ${{ secrets.INIT_CUST_LAT }}
-          INIT_CUST_LNG: ${{ secrets.INIT_CUST_LNG }}
-          BUILD_ENV: 'ci'
 
       - name: Check for lint errors 👀
         run: npm run lint
+
+      - name: Build the package 📦
+        run: npm run build
