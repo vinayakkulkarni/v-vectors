@@ -12,6 +12,9 @@
   "unpkg": "dist/v-vectors.js",
   "jsdelivr": "dist/v-vectors.js",
   "cdn": "dist/v-vectors.js",
+  "browser": {
+    "./sfc": "src/VSvg.vue"
+  },
   "types": "types/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
@@ -19,7 +22,7 @@
     "registry": "https://registry.npmjs.org"
   },
   "scripts": {
-    "build": "npm run bundle && npm run bundle:min",
+    "build": "rimraf dist && npm run bundle && npm run bundle:min",
     "bundle": "rollup -c build/rollup.config.js",
     "bundle:min": "rollup -c build/rollup.min.config.js",
     "lint:eslint": "eslint \"{,!(node_modules|dist)/**/}*.{js,ts,vue}\"",
