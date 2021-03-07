@@ -6,11 +6,10 @@ import vue from 'rollup-plugin-vue';
 import typescript from 'rollup-plugin-typescript2';
 
 const extensions = ['.js', '.ts', '.vue'];
-
 const plugins = [
   alias({
     entries: {
-      vue: 'vue/dist/vue.runtime.esm-browser.prod.js',
+      vue: 'vue/dist/vue.esm-browser.prod.js',
     },
   }),
   resolve({
@@ -26,10 +25,11 @@ const plugins = [
     exclude: 'src/**',
   }),
   vue({
-    isWebComponent: true,
-    template: {
-      isProduction: true,
+    target: 'browser',
+    templatePreprocessOptions: {
+      isProd: true,
     },
+    css: true, // Dynamically inject css as a <style> tag
   }),
   typescript({
     include: [/\.tsx?$/, /\.vue\?.*?lang=ts/],
@@ -44,6 +44,7 @@ export default [
     output: {
       format: 'esm',
       name: 'v-vectors',
+      exports: 'named',
       file: 'dist/v-vectors.esm.js',
     },
     plugins,
@@ -54,6 +55,7 @@ export default [
     output: {
       format: 'cjs',
       name: 'v-vectors',
+      exports: 'named',
       file: 'dist/v-vectors.cjs.js',
     },
     plugins,
@@ -64,6 +66,7 @@ export default [
     output: {
       format: 'umd',
       name: 'v-vectors',
+      exports: 'named',
       file: 'dist/v-vectors.js',
     },
     plugins,

@@ -26,10 +26,8 @@ const plugins = [
     exclude: 'src/**',
   }),
   vue({
-    isWebComponent: true,
-    template: {
-      isProduction: true,
-    },
+    target: 'browser',
+    css: true, // Dynamically inject css as a <style> tag
   }),
   typescript({
     include: [/\.tsx?$/, /\.vue\?.*?lang=ts/],
@@ -43,6 +41,7 @@ export default {
   output: {
     format: 'umd',
     name: 'v-vectors',
+    exports: 'named',
     file: 'dist/v-vectors.min.js',
   },
   plugins,
