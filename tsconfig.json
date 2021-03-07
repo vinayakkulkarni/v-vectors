@@ -27,6 +27,7 @@
     "vue",
   ],
   "include": [
+    "types/index.d.ts",
     "src/**/*.js",
     "src/**/*.vue"
   ],

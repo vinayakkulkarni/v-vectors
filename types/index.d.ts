@@ -1,5 +1,19 @@
-declare module 'v-vectors' {
-  import Vue from 'vue';
-  class VSvg extends Vue {}
-  export { VSvg };
+interface Circle {
+  cx: string;
+  cy: string;
+  fillColor: string;
+  fillOpacity: number | 'none';
+  r: string;
+}
+interface Path {
+  d: string;
+  fillColor: string;
+  fillOpacity: number | 'none';
+  strokeColor: string;
+  strokeOpacity: number | 'none';
+}
+export interface Marker {
+  viewBox: string;
+  circles?: Circle[];
+  paths?: Path[];
 }
