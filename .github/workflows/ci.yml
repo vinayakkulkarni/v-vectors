@@ -1,0 +1,50 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  ci:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14, 15]
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+
+      - name: Setup node env 📦
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Get npm cache directory 🏗
+        id: npm-cache
+        run: echo "::set-output name=dir::$(npm config get cache)"
+
+      - name: Restore cached node_modules 🤷‍♂️
+        uses: actions/cache@v2.1.4
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install dependencies 🛠
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci --prefer-offline --no-audit
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate the static site ⚡️
+        run: npm run generate
+        env:
+          API_URL: ${{ secrets.API_URL }}
+          GOOGLE_MAP_KEY: ${{ secrets.GOOGLE_MAP_KEY }}
+          INIT_CUST_LAT: ${{ secrets.INIT_CUST_LAT }}
+          INIT_CUST_LNG: ${{ secrets.INIT_CUST_LNG }}
+          BUILD_ENV: 'ci'
+
+      - name: Check for lint errors 👀
+        run: npm run lint
