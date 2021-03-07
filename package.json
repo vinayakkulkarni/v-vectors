@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Scalable Vector Graphics 🤝 Vue 3",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "private": false,
   "main": "dist/v-vectors.js",
@@ -11,7 +12,7 @@
   "unpkg": "dist/v-vectors.js",
   "jsdelivr": "dist/v-vectors.js",
   "cdn": "dist/v-vectors.js",
-  "types": "dist/src",
+  "types": "types/index.d.ts",
   "sideEffects": false,
   "publishConfig": {
     "access": "public",
