@@ -6,30 +6,28 @@
   >
     <defs />
     <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path#attributes -->
-    <template v-if="paths">
-      <path
-        v-for="(path, index) in marker.paths"
-        :key="index"
-        :d="path.d"
-        :fill="path.fillColor"
-        :fill-opacity="path.fillOpacity"
-        :stroke="path.strokeColor"
-        :stroke-opacity="path.strokeOpacity"
-        :tab-index="index"
-      />
-    </template>
+    <path
+      v-for="(path, index) in marker.paths"
+      v-show="paths"
+      :key="index"
+      :d="path.d"
+      :fill="path.fillColor"
+      :fill-opacity="path.fillOpacity"
+      :stroke="path.strokeColor"
+      :stroke-opacity="path.strokeOpacity"
+      :tab-index="index"
+    />
     <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle#attributes -->
-    <template v-if="circles">
-      <circle
-        v-for="(circle, index) in marker.circles"
-        :key="`circle-${index}`"
-        :cx="circle.cx"
-        :cy="circle.cy"
-        :r="circle.r"
-        :fill="circle.fillColor"
-        :fill-opacity="circle.fillOpacity || 1"
-      />
-    </template>
+    <circle
+      v-for="(circle, index) in marker.circles"
+      v-show="circles"
+      :key="`circle-${index}`"
+      :cx="circle.cx"
+      :cy="circle.cy"
+      :r="circle.r"
+      :fill="circle.fillColor"
+      :fill-opacity="circle.fillOpacity || 1"
+    />
   </svg>
 </template>
 
@@ -47,26 +45,16 @@
       },
     },
     setup(props: { marker: Marker }) {
-      const paths = computed(() => {
-        if (
-          props.marker &&
-          props.marker.paths &&
-          props.marker.paths.length > 0
-        ) {
-          return true;
-        }
-        return false;
-      });
-      const circles = computed(() => {
-        if (
+      const paths = computed(
+        () =>
+          props.marker && props.marker.paths && props.marker.paths.length > 0,
+      );
+      const circles = computed(
+        () =>
           props.marker &&
           props.marker.circles &&
-          props.marker.circles.length > 0
-        ) {
-          return true;
-        }
-        return false;
-      });
+          props.marker.circles.length > 0,
+      );
       return {
         paths,
         circles,
