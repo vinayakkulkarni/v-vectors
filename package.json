@@ -2,10 +2,7 @@
   "name": "v-vectors",
   "version": "1.0.0",
   "description": "Scalable Vector Graphics 🤝 Vue 3",
-  "files": [
-    "dist",
-    "types"
-  ],
+  "files": ["dist", "types"],
   "private": false,
   "main": "dist/v-vectors.js",
   "module": "dist/v-vectors.esm.js",
@@ -53,7 +50,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-vue": "^6.0.0",
-    "shipjs": "^0.23.0",
+    "shipjs": "0.23.0",
     "typescript": "^4.2.3",
     "vue": "^3.0.7"
   },
