@@ -15,7 +15,7 @@
         :fill-opacity="path.fillOpacity"
         :stroke="path.strokeColor"
         :stroke-opacity="path.strokeOpacity"
-        :tabindex="index"
+        :tab-index="index"
       />
     </template>
     <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle#attributes -->
@@ -47,12 +47,26 @@
       },
     },
     setup(props: { marker: Marker }) {
-      const paths = computed(
-        () => props.marker?.paths && props.marker?.paths.length > 0,
-      );
-      const circles = computed(
-        () => props.marker?.circles && props.marker?.circles.length > 0,
-      );
+      const paths = computed(() => {
+        if (
+          props.marker &&
+          props.marker.paths &&
+          props.marker.paths.length > 0
+        ) {
+          return true;
+        }
+        return false;
+      });
+      const circles = computed(() => {
+        if (
+          props.marker &&
+          props.marker.circles &&
+          props.marker.circles.length > 0
+        ) {
+          return true;
+        }
+        return false;
+      });
       return {
         paths,
         circles,

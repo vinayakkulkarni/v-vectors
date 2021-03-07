@@ -1,3 +1,3 @@
 import VSvg from './VSvg.vue';
 
-export { VSvg };
+export { VSvg as default };
