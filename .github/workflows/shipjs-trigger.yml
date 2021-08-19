@@ -16,21 +16,19 @@ jobs:
           ref: main
 
       - name: Setup node env 📦
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v2.4.0
         with:
-          node-version: 15
-          registry-url: "https://registry.npmjs.org"
+          node-version: 16
+          check-latest: true
+          registry-url: https://registry.npmjs.org
 
-      - name: Restore cached node_modules ⚡️
-        uses: actions/cache@v2.1.6
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      - name: Upgrade npm ✨
+        run: npm i -g npm@latest
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm ci --prefer-offline --no-audit
+        run: npm ci --prefer-offline --no-audit --no-optional
+        env:
+          CI: true
 
       - name: Perform a new release 🚨
         run: npx shipjs trigger
