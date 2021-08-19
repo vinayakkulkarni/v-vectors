@@ -1,3 +1,21 @@
+# [1.1.0](https://github.com/vinayakkulkarni/v-vectors/compare/v1.0.0...v1.1.0) (2021-08-19)
+
+
+### Bug Fixes
+
+* **deps:** bump actions/cache from 2.1.5 to 2.1.6 ([fd0e094](https://github.com/vinayakkulkarni/v-vectors/commit/fd0e09465e2d83f1ed617c4cf364d42f18ee1013))
+* **deps:** bump actions/cache from v2.1.4 to v2.1.5 ([a3e86a1](https://github.com/vinayakkulkarni/v-vectors/commit/a3e86a1e6d55ae5e5cf017fa656d51342f40e275))
+* remove unnecessary configs ([4eeccae](https://github.com/vinayakkulkarni/v-vectors/commit/4eeccaeabc2d6d5f5340102b4b4bf2307bac3435))
+
+
+### Features
+
+* **dx:** add lint-staged ([a5842b6](https://github.com/vinayakkulkarni/v-vectors/commit/a5842b69aac58c125d7ceb80d36d1c19b8ee9db4))
+* **ts:** update `index.d.ts` ([3c36655](https://github.com/vinayakkulkarni/v-vectors/commit/3c366554961b0cf8a5a895ba2572ddff590b1f61))
+* update source to be a installable component ([0633501](https://github.com/vinayakkulkarni/v-vectors/commit/06335010d4394f09cda9efd7cc89fe13b17a5973))
+
+
+
 # 1.0.0 (2021-03-07)
 
 
