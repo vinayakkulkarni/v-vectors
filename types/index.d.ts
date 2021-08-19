@@ -1,3 +1,10 @@
+import {
+  AllowedComponentProps,
+  ComponentCustomProps,
+  DefineComponent,
+  VNodeProps,
+} from 'vue';
+
 interface Circle {
   cx: string;
   cy: string;
@@ -17,3 +24,10 @@ export interface Marker {
   circles?: Circle[];
   paths?: Path[];
 }
+
+type VSvgComponentProps = Marker &
+  AllowedComponentProps &
+  ComponentCustomProps &
+  VNodeProps;
+
+export const VSvg: DefineComponent<VSvgComponentProps>;

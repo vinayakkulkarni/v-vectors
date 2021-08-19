@@ -35,10 +35,10 @@
 
 <script lang="ts">
   import { computed, defineComponent, PropType } from 'vue';
-  import { Marker } from '../types';
+  import { Marker } from '~/types';
 
   export default defineComponent({
-    name: 'VSvg',
+    name: 'Marker',
     props: {
       marker: {
         type: Object as PropType<Marker>,
