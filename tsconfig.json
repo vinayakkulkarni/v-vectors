@@ -20,19 +20,11 @@
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "vue": ["@vue/runtime-dom"],
       "@/*": ["./src/*"]
-    },
-    "types": [
-      "@types/node",
-    ]
+    }
   },
   "include": [
-    "src",
-    "types",
-    "build",
-    "shims"
+    "src"
   ],
   "exclude": [
     "node_modules",
