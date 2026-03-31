@@ -44,7 +44,7 @@
     "typescript": "^6.0.2",
     "unplugin-vue": "^7.1.1",
     "vite": "latest",
-    "vite-plus": "^0.1.14",
+    "vite-plus": "^0.1.15",
     "vue": "^3.5.31",
     "vue-tsc": "latest"
   },
