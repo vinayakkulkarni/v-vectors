@@ -1,4 +1,4 @@
-# v-vectors  📈
+# v-vectors 📈
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vinayakkulkarni/v-vectors/ci?logo=github-actions)](https://github.com/vinayakkulkarni/v-vectors/actions/workflows/ci.yml)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vinayakkulkarni/v-vectors/Ship%20js%20trigger?label=⛴%20Ship.js%20trigger)](https://github.com/vinayakkulkarni/v-vectors/actions/workflows/shipjs-trigger.yml)
@@ -22,13 +22,12 @@
 
 ## Features
 
-* Dynamic Vue Component to render vector graphics
-* Built from scratch usign Vue 3 with TypeScript
-
+- Dynamic Vue Component to render vector graphics
+- Built from scratch usign Vue 3 with TypeScript
 
 ## Table of Contents
 
-- [v-vectors  📈](#v-vectors--)
+- [v-vectors 📈](#v-vectors--)
   - [Features](#features)
   - [Table of Contents](#table-of-contents)
   - [Demo](#demo)
@@ -53,7 +52,7 @@
 
 ## Requirements
 
-* [vue](https://vuejs.org/) `^3.x`
+- [vue](https://vuejs.org/) `^3.x`
 
 ### Installation
 
@@ -65,7 +64,7 @@ CDN: [UNPKG](https://unpkg.com/v-vectors/dist/) | [jsDelivr](https://cdn.jsdeliv
 
 ### Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm ci
 
@@ -73,12 +72,12 @@ $ npm ci
 $ npm run build
 ```
 
-
 ## Usage
 
 ### Globally
 
 #### As a component
+
 ```javascript
 Vue.component('VVectors', require('v-vectors'));
 ```
@@ -99,6 +98,7 @@ import { VSvg } from 'v-vectors';
 ```
 
 #### Example
+
 <details>
 <summary>Locally imported as a component</summary>
 <br />
@@ -112,16 +112,15 @@ import { VSvg } from 'v-vectors';
 
 Vue.component('example-component', {
   components: {
-    VSvg
+    VSvg,
   },
   data() {
     return {
       marker: {
-        viewBox: "0 0 24 24",
+        viewBox: '0 0 24 24',
         paths: [
           {
-            d:
-              "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7",
+            d: 'M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7',
           },
         ],
       },
@@ -132,21 +131,20 @@ Vue.component('example-component', {
 
 </details>
 
-
 ## API
+
 ### Props
 
-| Name            | Type   | Required? | Default              | Description                                                 |
-| --------------  | ------ | --------- | ---------            | ----------------------------------------------------------- |
-| `marker`        | Object | Yes       | ''                   | Paths or Circles Array of objects, check [interfaces](./types/index.d.ts).  |
-
+| Name     | Type   | Required? | Default | Description                                                                |
+| -------- | ------ | --------- | ------- | -------------------------------------------------------------------------- |
+| `marker` | Object | Yes       | ''      | Paths or Circles Array of objects, check [interfaces](./types/index.d.ts). |
 
 ## Built with
 
 - [TypeScript](https://www.typescriptlang.org/).
 - [Vue 3](https://v3.vuejs.org)
 
-## Contributing 
+## Contributing
 
 1. Fork it ( [https://github.com/vinayakkulkarni/v-vectors/fork](https://github.com/vinayakkulkarni/v-vectors/fork) )
 2. Create your feature branch (`git checkout -b feat/new-feature`)
@@ -154,11 +152,11 @@ Vue.component('example-component', {
 4. Push to the branch (`git push origin feat/new-feature`)
 5. Create a new [Pull Request](https://github.com/vinayakkulkarni/v-vectors/compare)
 
-_Note_: 
+_Note_:
+
 1. Please contribute using [Github Flow](https://guides.github.com/introduction/flow/)
 2. Commits & PRs will be allowed only if the commit messages & PR titles follow the [conventional commit standard](https://www.conventionalcommits.org/), _read more about it [here](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional#type-enum)_
 3. PS. Ensure your commits are signed. _[Read why](https://withblue.ink/2020/05/17/how-and-why-to-sign-git-commits.html)_
-
 
 ## Author
 

@@ -1,12 +1,27 @@
 {
   "name": "v-vectors",
   "version": "1.1.0",
+  "private": false,
   "description": "Scalable Vector Graphics 🤝 Vue 3",
-  "type": "module",
+  "homepage": "https://github.com/vinayakkulkarni/v-vectors#readme",
+  "bugs": {
+    "url": "https://github.com/vinayakkulkarni/v-vectors/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Vinayak Kulkarni",
+    "email": "inbox.vinayak@gmail.com",
+    "url": "https://vinayakkulkarni.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinayakkulkarni/v-vectors"
+  },
   "files": [
     "dist"
   ],
-  "private": false,
+  "type": "module",
+  "sideEffects": false,
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
@@ -14,7 +29,6 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "sideEffects": false,
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
@@ -28,41 +42,26 @@
     "test": "echo 'test!'",
     "prepare": "is-ci || husky"
   },
-  "peerDependencies": {
-    "vue": "^3.5.0"
-  },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "@types/node": "^25.5.0",
+    "@types/node": "^25.8.0",
     "@vitejs/plugin-vue": "latest",
-    "@vue/runtime-dom": "^3.5.31",
+    "@vue/runtime-dom": "^3.5.34",
     "husky": "latest",
     "is-ci": "latest",
     "lint-staged": "latest",
-    "sass": "^1.98.0",
-    "typescript": "^6.0.2",
-    "unplugin-vue": "^7.1.1",
+    "sass": "^1.99.0",
+    "typescript": "^6.0.3",
+    "unplugin-vue": "^7.2.0",
     "vite": "latest",
-    "vite-plus": "^0.1.14",
-    "vue": "^3.5.31",
+    "vite-plus": "^0.1.21",
+    "vue": "^3.5.34",
     "vue-tsc": "latest"
   },
-  "author": {
-    "name": "Vinayak Kulkarni",
-    "email": "inbox.vinayak@gmail.com",
-    "url": "https://vinayakkulkarni.dev"
+  "peerDependencies": {
+    "vue": "^3.5.0"
   },
-  "license": "MIT",
-  "repository": {
-    "url": "git+https://github.com/vinayakkulkarni/v-vectors",
-    "type": "git"
-  },
-  "bugs": {
-    "url": "https://github.com/vinayakkulkarni/v-vectors/issues"
-  },
-  "homepage": "https://github.com/vinayakkulkarni/v-vectors#readme",
-  "packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499",
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
@@ -73,5 +72,6 @@
       "name": "node",
       "version": ">=24"
     }
-  }
+  },
+  "packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499"
 }
