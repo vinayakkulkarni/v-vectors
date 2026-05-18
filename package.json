@@ -46,7 +46,6 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@types/node": "^25.8.0",
-    "@vue/runtime-dom": "^3.5.34",
     "husky": "latest",
     "is-ci": "latest",
     "lint-staged": "latest",
@@ -55,7 +54,7 @@
     "unplugin-vue": "^7.2.0",
     "vite-plus": "^0.1.21",
     "vue": "^3.5.34",
-    "vue-tsc": "latest"
+    "vue-tsc": "^3.2.9"
   },
   "peerDependencies": {
     "vue": "^3.5.0"

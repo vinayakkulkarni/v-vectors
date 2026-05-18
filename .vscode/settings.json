@@ -1,5 +1,8 @@
 {
-  "volar.tsPlugin": true,
   "files.eol": "\n",
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "never"
+  }
 }
