@@ -1,19 +1,22 @@
 # v-vectors 📈
 
-[![Pipeline](https://img.shields.io/github/actions/workflow/status/vinayakkulkarni/v-vectors/pipeline.yml?logo=github-actions)](https://github.com/vinayakkulkarni/v-vectors/actions/workflows/pipeline.yml)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/vinayakkulkarni/v-vectors?sort=semver&logo=github)](https://github.com/vinayakkulkarni/v-vectors/releases)
-[![npm](https://img.shields.io/npm/v/v-vectors?logo=npm)](https://www.npmjs.com/package/v-vectors)
-[![npm](https://img.shields.io/npm/dm/v-vectors?logo=npm)](http://npm-stat.com/charts.html?package=v-vectors)
-[![npm bundle size (version)](https://img.shields.io/bundlephobia/min/v-vectors/latest)](https://bundlephobia.com/package/v-vectors@latest)
-[![npm type definitions](https://img.shields.io/npm/types/v-vectors)](https://github.com/vinayakkulkarni/v-vectors/blob/master/package.json)
-[![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/vinayakkulkarni/v-vectors?logo=lgtm)](https://lgtm.com/projects/g/vinayakkulkarni/v-vectors/alerts/)
-[![LGTM Grade](https://img.shields.io/lgtm/grade/javascript/github/vinayakkulkarni/v-vectors?logo=lgtm)](https://lgtm.com/projects/g/vinayakkulkarni/v-vectors/context:javascript)
-[![GitHub contributors](https://img.shields.io/github/contributors/vinayakkulkarni/v-vectors)](https://github.com/vinayakkulkarni/v-vectors/graphs/contributors)
-[![Built Using Janak](https://img.shields.io/badge/built%20using-janak-brightgreen)](https://github.com/vinayakkulkarni/janak)
+<!-- Badges -->
 
-[![vite-plus](https://img.shields.io/github/package-json/dependency-version/vinayakkulkarni/v-vectors/dev/vite-plus?logo=vite)](https://github.com/voidzero-dev/vite-plus)
-[![rollup](https://img.shields.io/npm/dependency-version/v-vectors/dev/rollup?logo=rollup.js)](https://rollupjs.org/guide/en/)
-[![typescript](https://img.shields.io/npm/dependency-version/v-vectors/dev/typescript?logo=TypeScript)](https://www.typescriptlang.org/)
+[![Pipeline](https://img.shields.io/github/actions/workflow/status/vinayakkulkarni/v-vectors/pipeline.yml?branch=main&logo=github-actions&label=pipeline)](https://github.com/vinayakkulkarni/v-vectors/actions/workflows/pipeline.yml)
+[![GitHub release](https://img.shields.io/github/v/release/vinayakkulkarni/v-vectors?sort=semver&logo=github&label=release)](https://github.com/vinayakkulkarni/v-vectors/releases)
+[![npm](https://img.shields.io/npm/v/v-vectors?logo=npm&label=npm)](https://www.npmjs.com/package/v-vectors)
+[![JSR](https://img.shields.io/jsr/v/@vinayakkulkarni/v-vectors?logo=jsr&label=jsr)](https://jsr.io/@vinayakkulkarni/v-vectors)
+[![npm downloads](https://img.shields.io/npm/dm/v-vectors?logo=npm&label=downloads)](http://npm-stat.com/charts.html?package=v-vectors)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/v-vectors?label=size)](https://bundlephobia.com/package/v-vectors@latest)
+[![types](https://img.shields.io/npm/types/v-vectors?logo=typescript&label=types)](https://github.com/vinayakkulkarni/v-vectors/blob/main/package.json)
+[![License](https://img.shields.io/github/license/vinayakkulkarni/v-vectors?logo=github&label=license)](./LICENSE)
+
+[![vite-plus](https://img.shields.io/github/package-json/dependency-version/vinayakkulkarni/v-vectors/dev/vite-plus?logo=vite&label=vite-plus)](https://github.com/voidzero-dev/vite-plus)
+[![typescript](https://img.shields.io/github/package-json/dependency-version/vinayakkulkarni/v-vectors/dev/typescript?logo=TypeScript&label=typescript)](https://www.typescriptlang.org/)
+[![pnpm](https://img.shields.io/github/package-json/packageManager/vinayakkulkarni/v-vectors?label=pnpm&logo=pnpm)](https://pnpm.io/)
+[![node](https://img.shields.io/node/v/v-vectors?logo=node.js&label=node)](https://nodejs.org/)
+
+<!-- End Badges -->
 
 ## Features
 
@@ -52,7 +55,7 @@
 ### Installation
 
 ```sh
-npm install --save v-vectors
+pnpm add v-vectors
 ```
 
 CDN: [UNPKG](https://unpkg.com/v-vectors/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/v-vectors/dist/) (available as `window.VVectors`)
@@ -61,10 +64,10 @@ CDN: [UNPKG](https://unpkg.com/v-vectors/dist/) | [jsDelivr](https://cdn.jsdeliv
 
 ```bash
 # install dependencies
-$ npm ci
+$ pnpm install --frozen-lockfile
 
 # package the library
-$ npm run build
+$ pnpm run build
 ```
 
 ## Usage

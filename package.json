@@ -2,7 +2,7 @@
   "name": "v-vectors",
   "version": "1.1.0",
   "private": false,
-  "description": "Scalable Vector Graphics 🤝 Vue 3",
+  "description": "Vue 3 SVG icon component with on-demand rendering, ARIA labels, sizing presets, and full TypeScript support.",
   "homepage": "https://github.com/vinayakkulkarni/v-vectors#readme",
   "bugs": {
     "url": "https://github.com/vinayakkulkarni/v-vectors/issues"
