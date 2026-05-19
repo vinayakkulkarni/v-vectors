@@ -45,7 +45,7 @@
   "devDependencies": {
     "@commitlint/cli": "^21.0.1",
     "@commitlint/config-conventional": "^21.0.1",
-    "@types/node": "^25.8.0",
+    "@types/node": "^25.9.0",
     "husky": "^9.1.7",
     "is-ci": "^4.1.0",
     "lint-staged": "^17.0.5",
@@ -54,7 +54,7 @@
     "unplugin-vue": "^7.2.0",
     "vite-plus": "^0.1.21",
     "vue": "^3.5.34",
-    "vue-tsc": "^3.2.9"
+    "vue-tsc": "^3.3.0"
   },
   "peerDependencies": {
     "vue": "^3.5.0"
