@@ -1,6 +1,6 @@
 {
   "name": "v-vectors",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": false,
   "description": "Vue 3 SVG icon component with on-demand rendering, ARIA labels, sizing presets, and full TypeScript support.",
   "homepage": "https://github.com/vinayakkulkarni/v-vectors#readme",
